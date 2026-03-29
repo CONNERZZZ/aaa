@@ -45,11 +45,11 @@ $_0xA77 | Set-Content $_0xC11 -Encoding UTF8
 Clear-Host 
 
 # 2. รับค่าจากผู้ใช้งาน
-$MyPID = Read-Host "Enter PID"
+ $_0x2AA = Read-Host (@("Enter"," PID") -join "")
 
 # 3. ตรวจสอบว่าใส่ข้อมูลมาหรือไม่ แล้วแสดงข้อความสำเร็จ
-if ($MyPID) {
-    Write-Host "Success! Input received: $MyPID" -ForegroundColor Green
+if ($0x2AA) {
+    Write-Host "Success! Input received: $0x2AA" -ForegroundColor Green
 } else {
     Write-Host "No input provided." -ForegroundColor Red
 }
